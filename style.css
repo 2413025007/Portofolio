@@ -131,33 +131,9 @@ header {
   background-color: #e67e22;
 }
 
-.hero {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-}
-
-.hero-text {
-  flex: 1;
-  min-width: 250px;
-}
-
-.hero-photo {
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.hero-photo img {
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 4px solid #e67e22;
-  background: #fff;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+#home {
+  margin: 0;
+  padding: 0;
 }
 
 .hero {
@@ -166,8 +142,16 @@ header {
   align-items: center;
   gap: 2rem;
   flex-wrap: wrap;
-  min-height: 280px;
-  z-index: 1;
+  min-height: 320px;
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  padding: 3rem 5vw;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 0; /* Bisa diubah jika ingin sudut rounded */
 }
 
 .hero::before {
@@ -176,7 +160,6 @@ header {
   inset: 0;
   z-index: 0;
   background: url('background.jpg') center/cover no-repeat;
-  /* Ganti 'background.jpg' sesuai nama file atau URL gambar yang kamu mau */
   filter: blur(8px) brightness(0.75);
 }
 
@@ -186,11 +169,10 @@ header {
   z-index: 1;
 }
 
-/* Hero text dan foto tetap seperti sebelumnya */
 .hero-text {
   flex: 1;
   min-width: 250px;
-  color: #fff; /* Agar jelas di atas background blur */
+  color: #fff;
   text-shadow: 0 2px 8px rgba(0,0,0,0.4);
 }
 
@@ -210,4 +192,3 @@ header {
   background: #fff;
   box-shadow: 0 2px 12px rgba(0,0,0,0.07);
 }
-
