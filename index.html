@@ -31,47 +31,62 @@
 
   <section id="tugas" class="section">
     <h2 class="section-title">Tugas</h2>
-    <div class="card-container">
-      <div class="card">
-        <img src="https://via.placeholder.com/150" alt="Tugas 1">
-        <a href="https://drive.google.com" target="_blank">Tugas 1</a>
+    <div class="scroll-wrapper">
+      <button class="scroll-btn left" onclick="scrollContainer('tugas-container', -300)">&#8592;</button>
+      <div class="card-container" id="tugas-container">
+        <div class="card">
+          <img src="https://via.placeholder.com/150" alt="Tugas 1">
+          <a href="https://drive.google.com" target="_blank">Tugas 1</a>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/150" alt="Tugas 2">
+          <a href="https://drive.google.com" target="_blank">Tugas 2</a>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/150" alt="Tugas 3">
+          <a href="https://drive.google.com" target="_blank">Tugas 3</a>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/150" alt="Tugas 4">
+          <a href="https://drive.google.com" target="_blank">Tugas 4</a>
+        </div>
       </div>
-      <div class="card">
-        <img src="https://via.placeholder.com/150" alt="Tugas 2">
-        <a href="https://drive.google.com" target="_blank">Tugas 2</a>
-      </div>
-      <div class="card">
-        <img src="https://via.placeholder.com/150" alt="Tugas 3">
-        <a href="https://drive.google.com" target="_blank">Tugas 3</a>
-      </div>
-      <div class="card">
-        <img src="https://via.placeholder.com/150" alt="Tugas 4">
-        <a href="https://drive.google.com" target="_blank">Tugas 4</a>
-      </div>
+      <button class="scroll-btn right" onclick="scrollContainer('tugas-container', 300)">&#8594;</button>
     </div>
   </section>
 
   <section id="kuis" class="section">
     <h2 class="section-title">Kuis</h2>
-    <div class="card-container">
-      <div class="card">
-        <img src="https://via.placeholder.com/150" alt="Kuis 1">
-        <a href="https://drive.google.com" target="_blank">Kuis 1</a>
+    <div class="scroll-wrapper">
+      <button class="scroll-btn left" onclick="scrollContainer('kuis-container', -300)">&#8592;</button>
+      <div class="card-container" id="kuis-container">
+        <div class="card">
+          <img src="https://via.placeholder.com/150" alt="Kuis 1">
+          <a href="https://drive.google.com" target="_blank">Kuis 1</a>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/150" alt="Kuis 2">
+          <a href="https://drive.google.com" target="_blank">Kuis 2</a>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/150" alt="Kuis 3">
+          <a href="https://drive.google.com" target="_blank">Kuis 3</a>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/150" alt="Kuis 4">
+          <a href="https://drive.google.com" target="_blank">Kuis 4</a>
+        </div>
       </div>
-      <div class="card">
-        <img src="https://via.placeholder.com/150" alt="Kuis 2">
-        <a href="https://drive.google.com" target="_blank">Kuis 2</a>
-      </div>
-      <div class="card">
-        <img src="https://via.placeholder.com/150" alt="Kuis 3">
-        <a href="https://drive.google.com" target="_blank">Kuis 3</a>
-      </div>
-      <div class="card">
-        <img src="https://via.placeholder.com/150" alt="Kuis 4">
-        <a href="https://drive.google.com" target="_blank">Kuis 4</a>
-      </div>
+      <button class="scroll-btn right" onclick="scrollContainer('kuis-container', 300)">&#8594;</button>
     </div>
   </section>
+
+  <script>
+    function scrollContainer(id, value) {
+      const container = document.getElementById(id);
+      container.scrollBy({ left: value, behavior: 'smooth' });
+    }
+  </script>
 </body>
 
 </html>
