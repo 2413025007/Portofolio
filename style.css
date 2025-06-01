@@ -1,8 +1,38 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #f4f4f4;
   color: #333;
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Background image blur untuk seluruh website */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: url('background.jpg') center/cover no-repeat;
+  filter: blur(8px) brightness(0.7);
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+}
+
+/* Konten tetap transparan/putih di atas background */
+header, .section, .hero, .container, .card, .card-container {
+  background: transparent;
+  /* jika perlu tambahkan box-shadow atau backdrop-filter */
+}
+
+/* Jika ingin efek transparansi putih di konten utama: */
+.section, .card-container {
+  backdrop-filter: blur(0.5px);
+  background: rgba(255,255,255,0.78); /* bisa diubah lebih transparan/tebal */
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  /* Atur sesuai kebutuhan desain */
 }
 
 header {
@@ -24,7 +54,7 @@ header {
 
 .logo {
   font-weight: bold;
-  color: #f39c12;
+  color: #3498db;
 }
 
 .nav-links {
@@ -51,7 +81,7 @@ header {
 }
 
 .hero h2 span {
-  color: #e67e22;
+  color: #3498db;
 }
 
 .hero p {
@@ -116,7 +146,7 @@ header {
 }
 
 .scroll-btn {
-  background-color: #f39c12;
+  background-color: ##3498db;
   color: white;
   border: none;
   font-size: 1.5rem;
@@ -128,7 +158,7 @@ header {
 }
 
 .scroll-btn:hover {
-  background-color: #e67e22;
+  background-color: #3498db;
 }
 
 #home {
